@@ -1,0 +1,9 @@
+%ul 
+	- @products.each do |product|
+		%li
+			%span= product
+			%span= link_to 'View', product_path(product)
+			%span= link_to 'Delete', product_path(product), method: :delete, data: { confirm: "U sure?" }
+			
+
+= link_to 'new', new_product_path

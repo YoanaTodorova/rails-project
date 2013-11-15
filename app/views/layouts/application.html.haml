@@ -1,0 +1,14 @@
+!!!
+%html
+	%head
+		%title Albavet
+		= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true
+		= javascript_include_tag "application", "data-turbolinks-track" => true
+		= csrf_meta_tags
+
+	%body
+		%ul
+			%li= link_to "home", controller: "home"
+			%li= link_to "products", controller: "products"
+		
+		= yield

@@ -1,0 +1,6 @@
+= form_for @product do |p|
+	%p= p.text_field :name
+	%p= p.text_field :price
+	%p= p.text_area :description
+
+	= p.submit
