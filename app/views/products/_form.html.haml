@@ -1,6 +1,11 @@
 = form_for @product do |p|
-	%p= p.text_field :name
-	%p= p.text_field :price
-	%p= p.text_area :description
+	%span= p.label :name
+	%span= p.text_field :name
+	%br/
+	%span= p.label :price
+	%span= p.text_field :price
+	%br/
+	%span= p.label :description
+	%span= p.text_area :description
 
 	= p.submit
