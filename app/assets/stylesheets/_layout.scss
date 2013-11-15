@@ -1,0 +1,25 @@
+body { float: left; }
+
+#menu {
+	float: left;
+	margin: 0px;
+	padding: 0px;
+}
+
+#menu li {
+	float: left;
+	margin: 0px;
+	padding: 0px;
+	width: 60px;
+	list-style-type: none;
+}
+
+.main {
+	float: left;
+	margin: 0px;
+	padding: 0px;
+}
+
+.error_message {
+	color: red;
+}

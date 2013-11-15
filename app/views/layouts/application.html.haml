@@ -7,8 +7,10 @@
 		= csrf_meta_tags
 
 	%body
-		%ul
+		%ul{ :id => 'menu' }
 			%li= link_to "home", controller: "home"
 			%li= link_to "products", controller: "products"
 		
-		= yield
+		#container
+			.main
+				= yield
