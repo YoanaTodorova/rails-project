@@ -13,7 +13,7 @@ class ProductsController < ApplicationController
      redirect_to products_path 
    else
     render 'new'
-  end
+    end
   end
 
   def show
