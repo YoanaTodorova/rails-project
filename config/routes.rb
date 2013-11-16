@@ -10,7 +10,9 @@ Albavet::Application.routes.draw do
 
   root 'home#index'
 
-  resources :players
+  resources :players do
+    resources :comments
+  end
 
   get "*path" => 'home#index'
 
