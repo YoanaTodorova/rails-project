@@ -1,0 +1,7 @@
+#players-content
+  %ul
+    - @players.each do |player|
+      %li
+        = link_to player_path(player[:id]) do
+          %img{ :src => "../assets/funny-football-player.jpg", :width => "100px" }
+          .player-name= player[:name]

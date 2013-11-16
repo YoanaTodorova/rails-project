@@ -1,6 +1,7 @@
 Albavet::Application.routes.draw do
   get "home/index"
-  get "products/index"
+  get "players/index"
+  get "gallery/index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -10,6 +11,8 @@ Albavet::Application.routes.draw do
   root 'home#index'
 
   resources :products
+  
+  resources :players
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

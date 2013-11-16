@@ -1,0 +1,5 @@
+#gallery-content
+  %ul
+    - @images.each do |img|
+      %li
+        %img{ :src => img[:link]}
