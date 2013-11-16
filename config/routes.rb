@@ -10,9 +10,9 @@ Albavet::Application.routes.draw do
 
   root 'home#index'
 
-  resources :products
-  
   resources :players
+
+  get "*path" => 'home#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
