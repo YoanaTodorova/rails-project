@@ -2,4 +2,15 @@
   = @player[:name]
   = @player[:position]
 
+  - if @comments.empty?
+    %p No comments for this player
+  
+  %ul
+    - @comments.each do |comment|
+      %li
+        %label= comment.author
+        %p= comment.content
+
+  = form_for([@player, Comment.new]) do |f|
+    = f.submit
   = link_to 'Назад', players_path

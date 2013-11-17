@@ -7,6 +7,7 @@ class PlayersController < ApplicationController
 
   def show
     @player = Player.find(params[:id])
+    @comments = @player.comments
   end
 
   private
@@ -14,7 +15,7 @@ class PlayersController < ApplicationController
     pl = Player.new
     pl.name = "Димитър Мусев"
     pl.position = "полузащитник"
-    pl.description = ""
+    pl.content = ""
     pl.save
   end
 
