@@ -6,19 +6,11 @@ class PlayersController < ApplicationController
   end
 
   def show
-    @player = Player.find(params[:id])
+    @player = Player.find params[:id]
     @comments = @player.comments
   end
 
   private
-  def new_player
-    pl = Player.new
-    pl.name = "Димитър Мусев"
-    pl.position = "полузащитник"
-    pl.content = ""
-    pl.save
-  end
-
   def catch_not_found
     yield
     rescue ActiveRecord::RecordNotFound
