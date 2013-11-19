@@ -3,8 +3,6 @@ class CommentsController < ApplicationController
   def create
     @player = Player.find params[:player_id]
     @comment = @player.comments.build comment_params
-
-    @comment.author = "yoana"
     @comment.save
 
     redirect_to player_path @player
