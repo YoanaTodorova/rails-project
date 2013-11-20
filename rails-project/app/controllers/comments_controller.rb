@@ -2,7 +2,7 @@ class CommentsController < ApplicationController
   
   def create
     @player = Player.find params[:player_id]
-    @player.comments.build(comment_params).savee
+    @player.comments.build(comment_params).save
 
     redirect_to player_path @player
   end
