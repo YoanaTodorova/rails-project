@@ -10,9 +10,8 @@ class CommentsController < ApplicationController
 
   def destroy
     @player = Player.find params[:player_id]
-    @comment = @player.comments.find params[:id]
-
-    @comment.destroy
+    @player.comments.find(params[:id]).destroy
+    
     redirect_to player_path @player
   end
 
