@@ -1,0 +1,17 @@
+#players-content
+  .player-info #{ @player[:name] } - #{ @player[:position] }
+
+  - if @comments.empty?
+    %p Няма коментари за този играч.
+  
+  -else
+    %ul
+      - @comments.each do |comment|
+        %li
+          %p= comment.author
+          %p= comment.content
+
+          = link_to 'Изтрий', [comment.player, comment], method: :delete
+
+  #form
+    = render 'form'

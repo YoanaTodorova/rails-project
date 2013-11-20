@@ -1,0 +1,8 @@
+= form_for([@player, Comment.new]) do |f|
+  %span= f.label :author, 'Автор:'
+  %span= f.text_field :author
+  %br/
+  %span= f.label :content, 'Коментар:'
+  %span= f.text_field :content
+  = f.submit
+= link_to 'Назад', players_path
