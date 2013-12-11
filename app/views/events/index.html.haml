@@ -1,0 +1,10 @@
+- if @events.empty?
+  Няма предстоящи събития.
+
+%ul
+  - @events.each do |ev|
+    %li
+      =link_to ev.title, event_path(ev)
+      %span= ev.starts
+
+= link_to 'Добави ново събитие', new_event_path

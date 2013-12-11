@@ -1,0 +1,11 @@
+= form_for @event do |f|
+  %span= f.label :title, 'Заглавие: '
+  %span= f.text_field :title
+  %br/
+  %span= f.label :description, 'Описание: '
+  %span= f.text_field :description
+  %br/
+  %span= f.label :starts, 'Начало: '
+  %span= f.text_field :starts
+  %br/
+  = f.submit 'Създай'

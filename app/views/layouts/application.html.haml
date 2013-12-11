@@ -1,17 +1,17 @@
 !!!
 %html
-    %head
-        %title Протеза
-        = stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true
-        = javascript_include_tag "application", "data-turbolinks-track" => true
-        = csrf_meta_tags
+  %head
+    %title Протеза
+    = stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true
+    = javascript_include_tag "application", "data-turbolinks-track" => true
+    = csrf_meta_tags
 
-    %body
-        %ul{ :id => 'menu' }
-            %li= link_to "Начало", controller: "home"
-            %li= link_to "Играчи", controller: "players"
-            %li= link_to "Събития", controller: "events"
-		
-        #container
-            .main
-                = yield
+  %body
+    %ul{ :id => 'menu' }
+      %li= link_to "Начало", controller: "home"
+      %li= link_to "Играчи", controller: "players"
+      %li= link_to "Събития", controller: "events"
+
+    #container
+      .main
+        = yield

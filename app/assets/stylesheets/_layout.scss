@@ -4,6 +4,7 @@ body { float: left; }
   float: left;
   margin: 0px;
   padding: 0px;
+  margin-bottom: 30px;
 }
 
 #menu li {
@@ -22,4 +23,9 @@ body { float: left; }
 
 .error_message {
   color: red;
+}
+
+#container {
+  margin: 0px;
+  padding: 0px;
 }
